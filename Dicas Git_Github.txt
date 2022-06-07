@@ -1,0 +1,91 @@
+SETAR USUARIO
+git config --global user.name "Nome"
+
+
+SETAR EMAIL
+git config --global user.email "usuario@email.com"
+
+SETAR EDITOR
+git config --global core.editor vscode
+
+LISTAR CONFIGURAÇOES
+git config --list
+
+CRIAR UMA PASTA modulogit
+
+CRIAR REPOSITORIO LOCAL - irá criar um arquivo .git
+git init
+
+
+VERIFICA ESTADO DOS ARQUIVOS/DIRETORIOS
+git status
+
+ADICIONAR UM ARQUIVO ESPECIFICO
+git add README.md
+
+ADICIONAR TOOS OS ARQUIVOS DO DIRETORIO QUE NAO ESTAO TRACKEADOS (vai para STAGED)
+git add -A
+git add .
+git add *
+
+FAZENDO O COMMIT - para poder registrar no git
+git commit -m "Primeiro commit"
+
+
+LISTAR COMMITS QUE FORAM FEITOS
+git log
+
+LISTA OS BRANCHS 
+git branch 
+
+VOLTA PARA O ESTADO ANTERIOR E EXCLUI TODOS OS ARQUIVOS - Temos o hard(exclui os arquivos), soft(volta para o estado antes do commit, mas mantem os arquivos), mixed
+git reset --hard CODIGO HASH
+
+
+CRIA UM NOVO BRANCH
+git branch teste
+
+MUDAR DE BRANCH
+git checkout teste
+
+MOSTRA O QUE FOI MODIFICADO NO ARQUIVO
+git diff
+
+MOSTRA O NOME DO ARQUIVO QUE FOI MODIFICADO
+git diff --name-only
+
+MANDAR ALTERAÇÕES PARA O GITHUB
+git push origin master
+
+REVERTER ALTERAÇÕES NO MOMENTO
+git revert --no-edit CODIGO HASH
+
+EXCLUIR UM BRANCH REMOTO GITHUB
+git push origin :teste
+
+EXCLUIR UM BRANCH LOCAL
+git branch -D teste
+
+PEGAR OS ARQUIVOS QUE FORAM CRIADOS POR OUTRO USUARIO OU REMOTAMENTE NO GITHUB
+git pull origin master
+
+CLONAR UM PROJETO
+git clone URL
+
+PARA CONTRIBUIR COM ALGUM PROJETO
+no github dar um FORK e depois clonar o projeto para o meu local
+
+
+Desfazendo alteração local (working directory)
+Este comando deve ser utilizando enquanto o arquivo não foi adicionado na staged area.
+git checkout -- meu_arquivo.txt
+
+
+Desfazendo alteração local (staging area)
+Este comando deve ser utilizando quando o arquivo já foi adicionado na staged area.
+git reset HEAD meu_arquivo.txt
+
+
+Exibir os repositórios remotos
+git remote
+git remote -v
